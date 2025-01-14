@@ -48,19 +48,23 @@ h2 {
 }
 
 h3 {
-    font-size: 5rem;
+    font-size: 4rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 0.05rem;
 }
 
 h4 {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
 }
 
 h5 {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 h6 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
 }
 
 /* Text & Links */
@@ -94,7 +98,7 @@ p {
 }
 
 .main-content {
-    max-width: 130rem;
+    max-width: 120rem;
     margin: 0 auto;
     padding: 10rem var(--gap);
 }
@@ -227,6 +231,67 @@ p {
     animation: slideIn 1s ease-out, float 2s ease-in-out infinite;
     animation-delay: 0s, 1s;
 }
+
+
+/* Projects */
+
+.projects-content {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    flex-flow: column wrap;
+    text-align: center;
+}
+
+.project-main-heading {
+    text-align: center;
+    margin-bottom: 10rem;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas, todas com a mesma largura */
+    gap: var(--gap);
+}
+
+.project {
+    background-color: rgba(34, 34, 34, 0.8); /* Cor de fundo */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaçamento entre os elementos dentro do item */
+    height: 300px; /* Altura fixa para garantir que todas as caixas tenham o mesmo tamanho */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar efeito de profundidade */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de transição */
+}
+
+.project:hover {
+    transform: translateY(-10px); /* Efeito de "levitação" ao passar o mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra mais forte ao passar o mouse */
+}
+
+.project i {
+    font-size: 4rem;
+    color: var(--yellow-color); /* Cor do ícone */
+    margin-bottom: 1.5rem;
+}
+
+.project h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--white-color); /* Cor do título */
+}
+
+.project p {
+    font-size: 1.5rem;
+    color: var(--neutral-white-color); /* Cor da descrição */
+    margin-top: 1rem;
+}
+
 
 /* Animations */
 @keyframes slideIn {
