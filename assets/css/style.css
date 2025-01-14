@@ -29,7 +29,7 @@ body {
     line-height: 1.5;
 }
 
-/* Headings */
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: inherit;
 }
@@ -49,10 +49,10 @@ h2 {
 
 h3 {
     font-size: 4rem;
-    margin-bottom: 5rem;
     text-transform: uppercase;
-    line-height: 1.2;
     letter-spacing: 0.05rem;
+    line-height: 1.2;
+
 }
 
 h4 {
@@ -67,13 +67,12 @@ h6 {
     font-size: 2.5rem;
 }
 
-/* Text & Links */
-a {
-    text-decoration: none;
-}
-
 p {
     margin-bottom: 3rem;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Utility Classes */
@@ -111,13 +110,18 @@ p {
     right: 0;
     width: 100%;
     z-index: 1;
+    background-color: rgba(26, 26, 26, 0.85); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    backdrop-filter: blur(5px);
 }
 
 .menu-content {
+    max-width: 120rem;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
+    padding: 0.2rem 2rem;
 }
 
 .menu h1 {
@@ -183,6 +187,7 @@ p {
     border: 0;
     border-radius: 3rem;
     cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .contact-btn button:hover {
@@ -193,8 +198,6 @@ p {
 .contact-btn a i {
     font-size: 3.5rem;
     padding: 1rem;
-    text-decoration: none;
-    margin: 0 0.1rem;
     color: var(--white-color);
 }
 
@@ -204,15 +207,13 @@ p {
 
 /* Home */
 .home-content {
-    position: relative;
     display: grid;
     grid-template-columns: 1.5fr 1.2fr;
     gap: var(--gap);
     min-height: 100vh;
 }
 
-.home-text-content,
-.home-img {
+.home-text-content, .home-img {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -222,9 +223,9 @@ p {
     max-width: 100%;
     height: auto;
     border-radius: 30%;
-    box-shadow: 0 0 10px 10px rgba(255, 204, 38, 0.6);
+    box-shadow: 0 0 10px 7px rgba(255, 204, 38, 0.6);
     margin: 20px;
-    padding: 5px;
+    padding: 2px;
 }
 
 .home-img .slide-in {
@@ -232,66 +233,111 @@ p {
     animation-delay: 0s, 1s;
 }
 
-
 /* Projects */
-
 .projects-content {
     display: flex;
     justify-content: center;
-    min-height: 100vh;
     flex-flow: column wrap;
     text-align: center;
 }
 
 .project-main-heading {
-    text-align: center;
     margin-bottom: 10rem;
 }
 
-
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas, todas com a mesma largura */
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--gap);
 }
 
 .project {
-    background-color: rgba(34, 34, 34, 0.8); /* Cor de fundo */
+    background-color: rgba(34, 34, 34, 0.8);
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Espaçamento entre os elementos dentro do item */
-    height: 300px; /* Altura fixa para garantir que todas as caixas tenham o mesmo tamanho */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar efeito de profundidade */
+    justify-content: space-between;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de transição */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project:hover {
-    transform: translateY(-10px); /* Efeito de "levitação" ao passar o mouse */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra mais forte ao passar o mouse */
+    transform: translateY(-10px);
+    box-shadow: 0 0 0.8rem var(--yellow-color);
 }
 
 .project i {
     font-size: 4rem;
-    color: var(--yellow-color); /* Cor do ícone */
+    color: var(--yellow-color);
     margin-bottom: 1.5rem;
 }
 
 .project h4 {
     font-size: 2rem;
+    color: var(--white-color);
     margin-bottom: 1rem;
-    color: var(--white-color); /* Cor do título */
 }
 
 .project p {
     font-size: 1.5rem;
-    color: var(--neutral-white-color); /* Cor da descrição */
+    color: var(--neutral-white-color);
     margin-top: 1rem;
 }
 
+/* Skills Section */
+
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--gap);
+}
+
+.skills-heading {
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
+    gap: var(--gap);
+    width: 100%;
+    max-width: 80rem;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(34, 34, 34, 0.8);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 0.8rem var(--yellow-color);
+}
+
+.skill i {
+    font-size: 4rem;
+    color: var(--yellow-color);
+    margin-bottom: 1rem;
+}
+
+.skill h4 {
+    font-size: 2rem;
+    color: var(--white-color);
+}
 
 /* Animations */
 @keyframes slideIn {
@@ -313,3 +359,40 @@ p {
         transform: translateY(-10px);
     }
 }
+
+/* Responsividade para a área de projetos */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; /* Cada item ocupa toda a largura */
+        gap: 2rem; /* Ajusta o espaçamento para telas menores */
+    }
+
+    .project {
+        height: auto; /* Permite que a altura seja ajustada automaticamente com base no conteúdo */
+        padding: 1.5rem; /* Ajusta o padding para telas menores */
+    }
+
+    .project h4 {
+        font-size: 1.8rem; /* Reduz um pouco o tamanho do título */
+    }
+
+    .project p {
+        font-size: 1.4rem; /* Reduz um pouco o tamanho do texto */
+    }
+}
+
+/* Ajuste adicional para telas muito pequenas */
+@media (max-width: 480px) {
+    .grid {
+        gap: 1.5rem;
+    }
+
+    .project h4 {
+        font-size: 1.6rem;
+    }
+
+    .project p {
+        font-size: 1.2rem;
+    }
+}
+
