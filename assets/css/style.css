@@ -338,35 +338,35 @@ a {
 }
 
 .python-icon {
-    color: #306998; /* Cor do Python */
+    color: #306998; 
 }
 
 .java-icon {
-    color: crimson; /* Cor do Java */
+    color: crimson; 
 }
 
 .js-icon {
-    color: #F7DF1E; /* Cor do JavaScript */
+    color: #F7DF1E; 
 }
 
 .sql-icon {
-    color: #F29111; /* Cor do SQL */
+    color: #F29111; 
 }
 
 .github-icon {
-    color: var(--white-color); /* Cor do GitHub */
+    color: var(--white-color); 
 }
 
 .postgresql-icon {
-    color: #336791; /* Cor do PostgreSQL */
+    color: #336791; 
 }
 
 .html-icon {
-    color: #E34F26; /* Cor do HTML */
+    color: #E34F26; 
 }
 
 .css-icon {
-    color: #1572B6; /* Cor do CSS */
+    color: #1572B6;
 }
 
 .skill h4 {
@@ -376,9 +376,9 @@ a {
 
 #about-me .home-content {
     display: grid;
-    grid-template-columns: 1.2fr 1.8fr; /* Ajusta proporção imagem/texto */
-    gap: var(--gap); /* Mantém o espaçamento uniforme */
-    align-items: center; /* Centraliza verticalmente */
+    grid-template-columns: 1.2fr 1.8fr;
+    gap: var(--gap); 
+    align-items: center; 
     min-height: 100vh;
 }
 
@@ -399,16 +399,16 @@ a {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding-top: 5rem; /* Faz com que ocupe a altura total da tela */
+    padding-top: 5rem;
 }
 
 .contact-form {
     width: 100%;
-    max-width: 50rem; /* Limita a largura máxima do formulário */
+    max-width: 50rem; 
     background-color: rgba(34, 34, 34, 0.9);
     padding: 2rem;
     border-radius: 1rem;
-    text-align: center; /* Centraliza o conteúdo dentro do formulário */
+    text-align: center; 
 }
 
 .contact-form fieldset {
@@ -426,7 +426,7 @@ a {
 
 .contact-form .form-group {
     margin-bottom: 2rem;
-    text-align: left; /* Alinha os rótulos à esquerda */
+    text-align: left; 
 }
 
 .contact-form .form-group label {
@@ -514,7 +514,7 @@ a {
 }
 
 .back-to-top {
-    display: none; /* Esconde o botão por padrão */
+    display: none; 
 }
 
 
