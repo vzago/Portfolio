@@ -11,20 +11,22 @@
 </head>
 
 <body class="main-bg">
+   <input id="close-menu" class="close-menu" type="checkbox" aria-label="Toggle menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="Toggle menu"></label>
     <aside class="menu">
         <div class="main-content menu-content">
             <h1>
-                <a href="#home">VITOR ZAGO</a>
+                <a href="#home" onclick="document.getElementById('close-menu').checked = false">VITOR ZAGO</a>
             </h1>
             <nav>
-                <ul>
+                <ul onclick="document.getElementById('close-menu').checked = false">
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#projects">Projetos</a></li>
                     <li><a href="#skills">Habilidades</a></li>
                     <li><a href="#about-me">Sobre</a></li>
                 </ul>
             </nav>
-
-            <div class="contact-btn">
+            <div class="contact-btn" onclick="document.getElementById('close-menu').checked = false">
                 <a href="#contact">
                     <button>Contato</button>
                 </a>
@@ -37,12 +39,12 @@
     <section id="home" class="home section">
         <div class="main-content home-content">
             <div class="home-text-content">
-                <h2>Olá, eu sou o <br> <span class="highlight">Vitor Zago</span>! 👋</h2>
+                <h2>Olá, eu sou o <br> <span class="highlight-orange">Vitor Zago</span>! 👋</h2>
                 <p>Sou um desenvolvedor FullStack apaixonado por transformar ideias em soluções digitais incríveis ✨.
                     <br>
                     Estou sempre em busca de novos desafios 🚀, criando projetos que não apenas impactam positivamente o
                     mundo, mas também expandem meu conhecimento 📚. <br>
-                    Que tal conversarmos? 💬 <a href="#about-me" class="highlight">Saiba mais sobre mim aqui</a> 🔗.
+                    Que tal conversarmos? 💬 <a href="#about-me" class="highlight-orange">Saiba mais sobre mim aqui</a> 🔗.
                 </p>
 
                 <div class="contact-btn">
@@ -70,7 +72,7 @@
 
     <section id="projects" class="projects section">
         <div class="main-content projects-content">
-            <h3 class="project-main-heading">Meus <span class="highlight">Projetos</span></h2>
+            <h3 class="project-main-heading">Meus <span class="highlight-orange">Projetos</span></h2>
                 <div class="grid">
                     <!-- Primeira Landing Page -->
                     <a href="https://my-first-landing-page-zago.netlify.app/" target="_blank">
@@ -103,80 +105,77 @@
     </section>
 
     <section id="skills" class="skills section">
-        <div class="main-content skills-content">
-            <h3 class="skills-heading">Minhas <span class="highlight">Habilidades</span></h3>
-            <div class="skills-grid">
-                <!-- Exemplo de Competências -->
-                <div class="skill">
-                    <i class="fab fa-python"></i>
-                    <h4>Python</h4>
-                </div>
-                <div class="skill">
-                    <i class="fab fa-java"></i>
-                    <h4>Java</h4>
-                </div>
-                <div class="skill">
-                    <i class="fab fa-js-square"></i>
-                    <h4>JavaScript</h4>
-                </div>
-                <div class="skill">
-                    <i class="fas fa-database"></i>
-                    <h4>SQL</h4>
-                </div>
-                <div class="skill">
-                    <i class="fab fa-github"></i>
-                    <h4>GitHub</h4>
-                </div>
-                <div class="skill">
-                    <i class="fas fa-server"></i>
-                    <h4>PostgreSQL</h4>
-                </div>
-                <div class="skill">
-                    <i class="fab fa-python"></i>
-                    <h4>Django</h4>
-                </div>
-                <div class="skill">
-                    <i class="fab fa-html5"></i>
-                    <h4>HTML</h4>
-                </div>
-                <div class="skill">
-                    <i class="fab fa-css3-alt"></i>
-                    <h4>CSS</h4>
-                </div>
+    <div class="main-content skills-content">
+        <h3 class="skills-heading">Minhas <span class="highlight-orange">Habilidades</span></h3>
+        <div class="skills-grid">
+            <div class="skill">
+                <i class="fab fa-python python-icon"></i>
+                <h4>Python</h4>
             </div>
-    </section>
-
-        <section id="home" class="home section">
-        <div class="main-content home-content">
-            <div class="home-img">
-                <img src="assets/img/profile.png" alt="Foto do Vitor Zago" class="slide-in">
+            <div class="skill">
+                <i class="fab fa-java java-icon"></i>
+                <h4>Java</h4>
             </div>
-            <div class="home-text-content">
-                <h2>Olá, eu sou o <br> <span class="highlight">Vitor Zago</span>! 👋</h2>
-                <p>Sou um desenvolvedor FullStack apaixonado por transformar ideias em soluções digitais incríveis ✨.
-                    <br>
-                    Estou sempre em busca de novos desafios 🚀, criando projetos que não apenas impactam positivamente o
-                    mundo, mas também expandem meu conhecimento 📚. <br>
-                    Que tal conversarmos? 💬 <a href="#about-me" class="highlight">Saiba mais sobre mim aqui</a> 🔗.
-                </p>
-
-                <div class="contact-btn">
-                    <a href="#">
-                        <button>Entre em contato</button>
-                    </a>
-                    <a href="https://www.linkedin.com/in/vitor-o-zago/" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/vzago" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.instagram.com/vitor_zago/" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-
+            <div class="skill">
+                <i class="fab fa-js-square js-icon"></i>
+                <h4>JavaScript</h4>
+            </div>
+            <div class="skill">
+                <i class="fas fa-database sql-icon"></i>
+                <h4>SQL</h4>
+            </div>
+            <div class="skill">
+                <i class="fab fa-github github-icon"></i>
+                <h4>GitHub</h4>
+            </div>
+            <div class="skill">
+                <i class="fas fa-server postgresql-icon"></i>
+                <h4>PostgreSQL</h4>
+            </div>
+            <div class="skill">
+                <i class="fab fa-python python-icon"></i>
+                <h4>Django</h4>
+            </div>
+            <div class="skill">
+                <i class="fab fa-html5 html-icon"></i>
+                <h4>HTML</h4>
+            </div>
+            <div class="skill">
+                <i class="fab fa-css3-alt css-icon"></i>
+                <h4>CSS</h4>
             </div>
         </div>
+    </div>
+</section>
+
+
+    <section id="about-me" class="home section">
+        <div class="main-content home-content">
+            <div class="home-img">
+                <img src="assets/img/vitor-zago-about.png" alt="Foto do Vitor Zago" class="slide-in">
+            </div>
+            <div class="home-text-content">
+                <h2>Sobre <span class="highlight-orange">Mim</span> 👱🏻‍♂️</h2>
+                <p>
+                    Olá! Eu sou <strong>Vitor Zago</strong>, tenho 21 anos e sou um apaixonado desenvolvedor 
+                    <strong class="highlight-yellow">FullStack</strong>. Minha missão é transformar ideias em soluções digitais que impactem positivamente o mundo. 🚀
+                </p>
+                <p>
+                    Com habilidades em <span class="highlight-yellow"> <strong>Python</strong></span>, <span class="highlight-yellow"><strong>Django</strong></span>, 
+                    <span class="highlight-yellow"><strong>JavaScript</strong></span> e muito mais, estou sempre em busca de novos desafios 
+                    e de oportunidades para aprender e crescer na área de tecnologia.
+                </p>
+                <p>
+                    Nos meus momentos livres, gosto de explorar novas tecnologias, compartilhar conhecimento com a comunidade, 
+                    e trabalhar em projetos que façam a diferença. Também adoro treinar, passar tempo com minha família 
+                    e brincar com meu irmão. 🌟
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+
 
 </body>
 
