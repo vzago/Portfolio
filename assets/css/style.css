@@ -394,6 +394,130 @@ a {
     animation-delay: 0s, 1s;
 }
 
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 5rem; /* Faz com que ocupe a altura total da tela */
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 50rem; /* Limita a largura máxima do formulário */
+    background-color: rgba(34, 34, 34, 0.9);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center; /* Centraliza o conteúdo dentro do formulário */
+}
+
+.contact-form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-form legend {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: var(--white-color);
+    margin-bottom: 1rem;
+}
+
+.contact-form .form-group {
+    margin-bottom: 2rem;
+    text-align: left; /* Alinha os rótulos à esquerda */
+}
+
+.contact-form .form-group label {
+    font-size: 1.8rem;
+    color: var(--neutral-white-color);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1rem;
+    border: 1px solid var(--neutral-white-color);
+    border-radius: 0.5rem;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.contact-form .form-group input::placeholder,
+.contact-form .form-group textarea::placeholder {
+    color: var(--neutral-white-color);
+}
+
+.contact-form .form-group textarea {
+    resize: vertical;
+}
+
+.contact-form .contact-btn {
+    text-align: center;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-color: var(--yellow-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--yellow-color);
+}
+
+.footer {
+    background-color: var(--gray-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 5px 0;
+    margin-top: 5px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer .social-icons {
+    display: flex;
+    gap: var(--gap);
+}
+
+.footer .social-icons a {
+    color: var(--white-color);
+    font-size: 3rem;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: var(--neutral-white-color);
+}
+
+.footer p {
+    font-size: 1em;
+    margin: 0.5rem;
+}
+
+.back-to-top {
+    display: none; /* Esconde o botão por padrão */
+}
+
+
 
 
 /* Animations */
@@ -462,6 +586,8 @@ a {
         left: 0;
     }
 
+
+
     .close-menu-label::after{
         content: '☰';
         position: fixed;
@@ -495,6 +621,22 @@ a {
         display: none;
     }
 
+    .back-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background-color: var(--gray-color);
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: var(--yellow-color);
+        border: 0.3rem solid var(--primary-color);
+    }
+    
+
     .home-content, #about-me .home-content {
         grid-template-columns: 1fr; /* Ajusta layout para uma coluna */
         gap: 2rem;
@@ -525,6 +667,8 @@ a {
     .skills-grid {
         grid-template-columns: repeat(2, 1fr); /* Ajusta o número de colunas */
     }
+
+    
 }
 
 
