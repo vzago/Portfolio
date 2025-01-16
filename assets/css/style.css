@@ -374,6 +374,8 @@ a {
     color: var(--white-color);
 }
 
+/* About-Me Section */
+
 #about-me .home-content {
     display: grid;
     grid-template-columns: 1.2fr 1.8fr;
@@ -393,6 +395,8 @@ a {
     animation: float 2s ease-in-out infinite;
     animation-delay: 0s, 1s;
 }
+
+/* Contact Section */
 
 #contact {
     display: flex;
@@ -476,6 +480,8 @@ a {
 .contact-form button:hover {
     background-color: var(--yellow-color);
 }
+
+/* Footer Section */
 
 .footer {
     background-color: var(--gray-color);
